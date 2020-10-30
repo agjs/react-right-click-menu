@@ -11,11 +11,11 @@ const App = () => {
   const ref = useRef();
   return (
     <div>
-      <ContextMenu className="test" contextElement={ref}>
+      <ContextMenu hideMenuOnClick={false} contextElement={ref}>
         <ul>
           {items.map(li => (
             <li onClick={() => console.log("clicked")} key={li.id}>
-              {li.title}
+              <span>{li.title}</span>
             </li>
           ))}
         </ul>
